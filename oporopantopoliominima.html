@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylemessage2.css">
+  <title>Παντοπωλείο</title>
+  <meta name="description" content="Online παντοπωλείο με φρέσκα προϊόντα, τρόφιμα και είδη καθημερινής χρήσης."></head>
+<body>
+
+
+
+</head>
+<body>
+
+  <div class="topnav" id="myTopnav">
+    <a href="oporopantopolio1.html" class="active"><img class="logo" style="width: 150px; height: 70px;" src="logo.jpg" alt=""> </a>
+    <a class="epikoinonia" style="background-color: #206100; color: #fafafa; " href="oporopantopoliominima.html">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+    <a href="oporopantopolio1.html">ΑΡΧΙΚΗ</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <br>
+
+
+
+<div class="row">
+    <div class="column" >
+        <form method="GET" action="mailto:test@example.com" enctype="text/plain">
+    
+            <div>Ονομα</div>
+            <input name="Name" />
+          
+            <div>E-Mail</div>
+            <input name="E-Mail Address" />
+          
+            <div>Μύνημα</div>
+            <textarea name="Message"></textarea>
+          
+            <br/>
+            <input style= "cursor: pointer; font-weight: bold; color: aliceblue; background-color: #356c19;" type="submit" value="Αποστολή" />
+          
+            <input type="hidden" name="body" />
+          </form>
+          
+          <script>
+           var form = document.getElementsByTagName('form')[0];
+           form.addEventListener('submit',contact,false);
+           function contact(e) {
+              // Prevent Default Form Submission
+              e.preventDefault();
+          
+              var target = e.target || e.srcElement;
+              var i = 0;
+              var message = '';
+          
+              // Loop Through All Input Fields
+              for(i = 0; i < target.length; ++i) {
+                 // Check to make sure it's a value. Don't need to include Buttons
+                 if(target[i].type != 'text' && target[i].type != 'textarea') {
+                        // Skip to next input since this one doesn't match our rules
+                    continue;
+                 }
+          
+                 // Add Input Name and value followed by a line break
+                 message += target[i].name + ': ' + target[i].value + "\r\n";
+              }
+              // Modify the hidden body input field that is required for the mailto: scheme
+              target.elements["body"].value = message;
+          
+              // Submit the form since we previously stopped it. May cause recursive loop in some browsers? Should research this.
+              this.submit();
+           }
+          </script>
+        
+        
+    </div>
+    <div class="column" >
+        <div class="info-container">
+
+
+            <h1 style=" color: rgb(255, 252, 252);">
+                ΕΠΙΚΟΙΝΩΝΙΑ
+            </h1>
+            <br>
+        <label style=" color: rgb(255, 252, 252);" for="">Διευθυνση: Αττικη 19009</label>
+        <br>
+        <br>
+          <br>
+            <!-- Only user email address added -->
+            <label style=" color: rgb(255, 252, 252);">Email: </label>
+          
+            <a href="mailto:feedback@geeksforgeeks.org" style="color: #fffbfb; text-decoration: none;">
+               gmail@gmail.com
+            </a><br />
+              <br>
+            <br />
+            <label style=" color: rgb(255, 252, 252);">Τηλέφωνο: </label>
+            <a href="tel:123-456-7890p123" style="color: #fffefe; text-decoration: none;" >229402563</a>
+        
+          
+            <a href="mailto:feedback@geeksforgeeks.org?cc=feedback@xyz.com&bcc=contact@xyz.org&subject=Mail to GeeksForGeeks&body=Demo email"
+                target="_blank">
+               
+            </a>
+
+        </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="column" >
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50310.60536917184!2d23.69713967661918!3d37.990830014211895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd1f067043f1%3A0x2736354576668ddd!2zzpHOuM6uzr3OsQ!5e0!3m2!1sel!2sgr!4v1683639920215!5m2!1sel!2sgr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+<br>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
+<div class="footer">
+  <p>By AlexBg &#169; &#174;</p>
+</div>
+
+     
+      
+<script src="./script.js "> </script>
+
+      
+<script src="https://drive.google.com/uc?id=1SxT3xJHdgrb3fPHZZPP9zSZFj4ZSzoQO"> </script>
+
+
+
+    
+</body>
+</html>
